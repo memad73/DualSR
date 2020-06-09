@@ -11,33 +11,30 @@ conda env create -f environment.yml
 conda activate dualsr_env
 ```
 
-## Training
+## Datasets
 
-To train the model(s) in the paper, run this command:
-
-```train
-python train.py --input-data <path_to_data> --alpha 10 --beta 20
-```
-
-> 📋Describe how to train the models, with example commands on how to train the models in your paper, including the full training procedure and appropriate hyperparameters.
+You can download datasets mentioned in the paper from the following links.
+- [DIV2KRK](http://www.wisdom.weizmann.ac.il/~vision/kernelgan/DIV2KRK_public.zip)
+- [NTIRE2017 track 2](https://data.vision.ee.ethz.ch/cvl/DIV2K/DIV2K_valid_LR_unknown_X2.zip)
+- [RealSR](https://github.com/csjcai/RealSR)
 
 ## Evaluation
 
-To evaluate my model on ImageNet, run:
-
+To super-resolve an image using DualSR, put the image in 'test/LR' folder and run:
 ```eval
-python eval.py --model-file mymodel.pth --benchmark imagenet
+python main.py
 ```
 
-> 📋Describe how to evaluate the trained models on benchmarks reported in the paper, give commands that produce the results (section below).
+If you want to get PSNR values, you need to provide ground-truth image and/or ground-truth blur kernel directories:
+```eval-gt
+python main.py --gt_dir 'path to ground-truth image' --kernel_dir 'path to ground-truth blur kernel'
+```
+You can use argument ```--debug``` to see PSNR and loss vlaues online during the training
 
-## Pre-trained Models
-
-You can download pretrained models here:
-
-- [My awesome model](https://drive.google.com/mymodel.pth) trained on ImageNet using parameters x,y,z. 
-
-> 📋Give a link to where/how the pretrained models can be downloaded and how they were trained (if applicable).  Alternatively you can have an additional column in your results table with a link to the models.
+To evaluate DualSR on a dataset, specify the directory that contains LR images:
+```eval-dataset
+python main.py --input_dir 'path to LR input image' --output_dir 'path to save results'
+```
 
 ## Results
 
