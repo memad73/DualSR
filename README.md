@@ -27,28 +27,24 @@ python main.py
 
 If you want to get PSNR values, you need to provide ground-truth image and/or ground-truth blur kernel directories:
 ```eval-gt
-python main.py --gt_dir 'path to ground-truth image' --kernel_dir 'path to ground-truth blur kernel'
+python main.py --gt_dir 'path to the ground-truth image' --kernel_dir 'path to the ground-truth blur kernel'
 ```
 You can use argument ```--debug``` to see PSNR and loss vlaues online during the training
 
 To evaluate DualSR on a dataset, specify the directory that contains LR images:
 ```eval-dataset
-python main.py --input_dir 'path to LR input image' --output_dir 'path to save results'
+python main.py --input_dir 'path to the LR input images' --output_dir 'path to save results'
 ```
 
 ## Results
 
-Our model achieves the following performance on :
+Our model achieves the following performance values (PSNR / SSIM) of DIV2KRK and NTIRE2017 datasets:
 
-### [Image Classification on ImageNet](https://paperswithcode.com/sota/image-classification-on-imagenet)
+| Model name         | DIV2KRK         | NTIRE2017        |
+| ------------------ |---------------- | ---------------- |
+| DualSR             |  30.92 / 0.872  |  28.82 / 0.8045  |
 
-| Model name         | Top 1 Accuracy  | Top 5 Accuracy |
-| ------------------ |---------------- | -------------- |
-| My awesome model   |     85%         |      95%       |
+All PSNR and SSIM values are calculated using 'Evaluate_PSNR_SSIM.m' script provided by [RCAN](https://github.com/yulunzhang/RCAN).
+## Acknowledgement
 
-> 📋Include a table of results from your paper, and link back to the leaderboard for clarity and context. If your main result is a figure, include that figure and link to the command or notebook to reproduce it. 
-
-
-## Contributing
-
-> 📋Pick a licence and describe how to contribute to your code repository. 
+The code is built on [KernelGAN](https://github.com/sefibk/KernelGAN). We thank the authors  for sharing the codes.
