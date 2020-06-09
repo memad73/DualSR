@@ -29,7 +29,7 @@ If you want to get PSNR values, you need to provide ground-truth image and/or gr
 ```eval-gt
 python main.py --gt_dir 'path to the ground-truth image' --kernel_dir 'path to the ground-truth blur kernel'
 ```
-You can use argument ```--debug``` to see PSNR and loss vlaues online during the training
+You can use argument ```--debug``` to see PSNR and loss values online during the training
 
 To evaluate DualSR on a dataset, specify the directory that contains LR images:
 ```eval-dataset
@@ -38,7 +38,7 @@ python main.py --input_dir 'path to the LR input images' --output_dir 'path to s
 
 ## Results
 
-Our model achieves the following performance values (PSNR / SSIM) of DIV2KRK and NTIRE2017 datasets:
+Our model achieves the following performance values (PSNR / SSIM) on DIV2KRK and NTIRE2017 datasets:
 
 | Model name         | DIV2KRK         | NTIRE2017        |
 | ------------------ |---------------- | ---------------- |
