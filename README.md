@@ -38,11 +38,11 @@ python main.py --input_dir 'path to the LR input images' --output_dir 'path to s
 
 ## Results
 
-Our model achieves the following performance values (PSNR / SSIM) on DIV2KRK and NTIRE2017 datasets:
+Our model achieves the following performance values (PSNR / SSIM) on DIV2KRK, Urban100 and NTIRE2017 datasets:
 
-| Model name         | DIV2KRK         | NTIRE2017        |
-| ------------------ |---------------- | ---------------- |
-| DualSR             |  30.92 / 0.872  |  28.82 / 0.8045  |
+| Model name         | DIV2KRK         | Urban100        | NTIRE2017        |
+| ------------------ |---------------- |---------------- | ---------------- |
+| DualSR             |  30.92 / 0.8728 |  25.04 / 0.7803 |  28.82 / 0.8045  |
 
 All PSNR and SSIM values are calculated using 'Evaluate_PSNR_SSIM.m' script provided by [RCAN](https://github.com/yulunzhang/RCAN).
 ## Acknowledgement
