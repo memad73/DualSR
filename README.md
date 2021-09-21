@@ -1,6 +1,6 @@
 # DualSR: Zero-Shot Dual Learning for Real-World Super-Resolution
 
-This repository is the official implementation of "DualSR: Zero-Shot Dual Learning for Real-World Super-Resolution".
+This repository is the official implementation of ["DualSR: Zero-Shot Dual Learning for Real-World Super-Resolution"](https://openaccess.thecvf.com/content/WACV2021/papers/Emad_DualSR_Zero-Shot_Dual_Learning_for_Real-World_Super-Resolution_WACV_2021_paper.pdf).
 
 ## Requirements
 
